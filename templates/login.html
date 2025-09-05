@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Cyber Deception - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        /* Page-specific styles */
+        body {
+            overflow: hidden;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 80%;
+            margin: 12px 0;
+        }
+        
+        .header {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="matrixCanvas"></canvas>
+
+<div class="container">
+    <h1 class="header">AI Cyber Deception</h1>
+    <div id="timer">⏱ Time left: 30s</div>
+    {% if error %}
+    <div class="error-message">⚠️ {{ error }}</div>
+    {% endif %}
+    <form method="POST" id="login-form">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">ACCESS SYSTEM</button>
+    </form>
+    <div id="timeout-msg">⛔ Can't login. Please try after 30 minutes.</div>
+</div>
+
+<script>
+    // Matrix background animation
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    let chars = "01";
+    // Add more matrix-like characters for visual interest
+    chars += "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+    chars = chars.split("");
+
+    let font_size = 14;
+    let columns = canvas.width / font_size;
+    let drops = [];
+
+    for (let x = 0; x < columns; x++) drops[x] = 1;
+
+    function draw() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#0F0";
+        ctx.font = font_size + "px monospace";
+
+        for (let i = 0; i < drops.length; i++) {
+            let text = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(text, i * font_size, drops[i] * font_size);
+            if (drops[i] * font_size > canvas.height && Math.random() > 0.975)
+                drops[i] = 0;
+            drops[i]++;
+        }
+    }
+
+    setInterval(draw, 33);
+    
+    // Enhanced countdown timer with color changes and blinking
+    let countdown = 30;
+    const timerElement = document.getElementById("timer");
+    
+    let interval = setInterval(() => {
+        countdown--;
+        timerElement.textContent = `⏱ Time left: ${countdown}s`;
+        
+        // Add warning color at 10 seconds
+        if (countdown <= 10) {
+            timerElement.classList.add('timer-warning');
+        }
+        
+        // Add danger color and blinking effect at 5 seconds
+        if (countdown <= 5) {
+            timerElement.classList.remove('timer-warning');
+            timerElement.classList.add('timer-danger');
+            timerElement.classList.add('timer-blink');
+        }
+        
+        if (countdown <= 0) {
+            clearInterval(interval);
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("timeout-msg").style.display = "block";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

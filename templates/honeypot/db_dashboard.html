@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Administration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .user-info {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .username {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .main-content {
+            background: rgba(0, 20, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .db-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff00;
+            margin: 10px 0;
+        }
+        
+        .tables-container {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+        }
+        
+        th {
+            background: rgba(0, 40, 0, 0.7);
+            color: #00ff00;
+        }
+        
+        tr:hover {
+            background: rgba(0, 50, 0, 0.3);
+        }
+        
+        .table-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .table-actions a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        
+        .table-actions a:hover {
+            text-decoration: underline;
+        }
+        
+        .query-container {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .query-editor {
+            width: 100%;
+            min-height: 100px;
+            background: rgba(0, 20, 0, 0.9);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            font-family: monospace;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        
+        .query-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            background: rgba(0, 100, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 150, 0, 0.7);
+        }
+        
+        .query-result {
+            background: rgba(0, 20, 0, 0.9);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            font-family: monospace;
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .message {
+            background: rgba(0, 50, 0, 0.7);
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00ff00;
+        }
+        
+        .backup-container {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .backup-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .backup-card {
+            background: rgba(0, 40, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .backup-card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            background: rgba(0, 20, 0, 0.9);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DATABASE ADMINISTRATION</h1>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">{{ username }}</div>
+                <div class="user-role">Database Administrator</div>
+            </div>
+            
+            <ul>
+                <li><a href="#" class="active">🗄️ Database Overview</a></li>
+                <li><a href="#query-editor">🔍 Query Editor</a></li>
+                <li><a href="#backup-section">💾 Backups</a></li>
+                <li><a href="/user-dashboard">📊 User Dashboard</a></li>
+                <li><a href="/logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            {% if message %}
+            <div class="message">{{ message }}</div>
+            {% endif %}
+            
+            <h2>Database Overview</h2>
+            
+            <div class="db-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Tables</div>
+                    <div class="stat-value">12</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">Total Size</div>
+                    <div class="stat-value">856 MB</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">Queries/sec</div>
+                    <div class="stat-value">24.5</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">Connections</div>
+                    <div class="stat-value">8</div>
+                </div>
+            </div>
+            
+            <h3>Database Tables</h3>
+            <div class="tables-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Table Name</th>
+                            <th>Rows</th>
+                            <th>Last Modified</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for table in tables %}
+                        <tr>
+                            <td>{{ table.name }}</td>
+                            <td>{{ table.rows }}</td>
+                            <td>{{ table.last_modified }}</td>
+                            <td class="table-actions">
+                                <a href="#" onclick="loadTable('{{ table.name }}')">Browse</a> | 
+                                <a href="#" onclick="showStructure('{{ table.name }}')">Structure</a> | 
+                                <form method="POST" style="display:inline;">
+                                    <input type="hidden" name="action" value="backup">
+                                    <input type="hidden" name="table" value="{{ table.name }}">
+                                    <button type="submit" class="btn" style="padding: 3px 8px; font-size: 0.8rem;">Backup</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3 id="query-editor">SQL Query Editor</h3>
+            <div class="query-container">
+                <form method="POST">
+                    <input type="hidden" name="action" value="query">
+                    <textarea name="sql_query" class="query-editor" placeholder="Enter your SQL query here...">SELECT * FROM users LIMIT 10;</textarea>
+                    
+                    <div class="query-actions">
+                        <button type="submit" class="btn">Execute Query</button>
+                        <span>Press Ctrl+Enter to execute</span>
+                    </div>
+                </form>
+                
+                {% if query_result %}
+                <div class="query-result">
+                    {{ query_result|safe }}
+                </div>
+                {% endif %}
+            </div>
+            
+            <h3 id="backup-section">Database Backup</h3>
+            <div class="backup-container">
+                <p>Create and manage database backups. Regular backups help protect against data loss.</p>
+                
+                <div class="backup-options">
+                    <div class="backup-card">
+                        <div class="backup-card-title">Quick Backup</div>
+                        <p>Create a backup of a specific table or the entire database.</p>
+                        
+                        <form method="POST">
+                            <input type="hidden" name="action" value="backup">
+                            <div class="form-group">
+                                <label for="backup-table">Select Table:</label>
+                                <select id="backup-table" name="table">
+                                    <option value="all">All Tables</option>
+                                    {% for table in tables %}
+                                    <option value="{{ table.name }}">{{ table.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button type="submit" class="btn">Start Backup</button>
+                        </form>
+                    </div>
+                    
+                    <div class="backup-card">
+                        <div class="backup-card-title">Scheduled Backups</div>
+                        <p>Current schedule: Daily at 03:00</p>
+                        <button class="btn">Change Schedule</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simulated functionality
+        function loadTable(tableName) {
+            alert(`Loading data from table: ${tableName}`);
+        }
+        
+        function showStructure(tableName) {
+            alert(`Showing structure for table: ${tableName}`);
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add delay for realistic loading behavior
+            setTimeout(() => {
+                console.log("Database dashboard loaded");
+            }, 1000 + Math.random() * 1500);
+            
+            // Add keyboard shortcut for SQL execution
+            const queryEditor = document.querySelector('.query-editor');
+            if (queryEditor) {
+                queryEditor.addEventListener('keydown', function(e) {
+                    // Ctrl+Enter to execute query
+                    if (e.ctrlKey && e.key === 'Enter') {
+                        e.preventDefault();
+                        this.closest('form').submit();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

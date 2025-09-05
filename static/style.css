@@ -1,0 +1,276 @@
+/* Global Styles for AI Cyber Deception Platform */
+
+/* Base elements */
+body {
+    background-color: #0c0c0c;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(rgba(0, 100, 0, 0.1) 1px, transparent 1px),
+        radial-gradient(rgba(0, 100, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+/* Header styles */
+.header {
+    background: rgba(0, 20, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #00dd00;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+h3 {
+    color: #00cc00;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+/* Content container */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation links */
+.nav-links {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(0, 30, 0, 0.5);
+    border-radius: 8px;
+}
+
+.nav-links a {
+    color: #00ff00;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    background: rgba(0, 100, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Box containers */
+.box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(0, 20, 0, 0.5);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 100, 0, 0.2);
+}
+
+/* Login Containers */
+.container {
+    position: relative;
+    top: 20vh;
+    width: 400px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Form elements */
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    background: rgba(0, 10, 0, 0.7);
+    color: #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    border-color: #00ff99;
+}
+
+button {
+    padding: 12px 20px;
+    background: rgba(0, 50, 0, 0.5);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: rgba(0, 70, 0, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 10, 0, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 100, 0, 0.2);
+    margin-top: 20px;
+}
+
+th {
+    padding: 15px 10px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    text-align: center;
+    background: rgba(0, 50, 0, 0.5);
+    font-weight: bold;
+    color: #00ff00;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px 10px;
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+tr:hover td {
+    background: rgba(0, 50, 0, 0.2);
+}
+
+/* Status classes */
+.normal {
+    color: #10b981;
+    text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+}
+
+.suspicious {
+    color: #facc15;
+    text-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+}
+
+.attacker {
+    color: #ef4444;
+    text-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
+    font-weight: bold;
+}
+
+/* Timer styles */
+#timer {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.timer-warning {
+    color: #ffcc00 !important;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.7);
+}
+
+.timer-danger {
+    color: #ff3333 !important;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.7);
+}
+
+.timer-blink {
+    animation: blink 0.5s infinite alternate;
+}
+
+/* Error message */
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff5555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 3px solid #ff3333;
+    text-align: left;
+}
+
+#timeout-msg {
+    display: none;
+    color: #ff3333;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+/* Status indicator pulse animations */
+td.attacker:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    margin-left: 10px;
+    animation: pulse-red 2s infinite;
+}

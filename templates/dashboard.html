@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Cyber Deception Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Page-specific styles */
+        .content {
+            max-width: 1200px;
+        }
+        
+        /* Status indicator pulse animations */
+        td.attacker {
+            position: relative;
+        }
+        
+        td.attacker:after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            margin-left: 10px;
+            animation: pulse-red 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI CYBER DECEPTION DASHBOARD</h1>
+    </div>
+    
+    <div class="content">
+        <div class="nav-links">
+            <a href="/ip-checker">🔍 MANUAL IP CHECKER</a> | 
+            <a href="/honeypot-dashboard">🍯 HONEYPOT MONITOR</a> | 
+            <a href="/logout">🚪 LOGOUT</a>
+        </div>
+        
+        <h2>SYSTEM ACTIVITY LOG</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>IP ADDRESS</th>
+                    <th>TIMESTAMP</th>
+                    <th>USERNAME</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in logs %}
+                <tr>
+                    <td>{{ entry.ip }}</td>
+                    <td>{{ entry.time }}</td>
+                    <td>{{ entry.user }}</td>
+                    <td class="{{ entry.status_class }}">{{ entry.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        // Add a simple visual effect when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach((row, index) => {
+                row.style.opacity = '0';
+                setTimeout(() => {
+                    row.style.transition = 'opacity 0.3s ease';
+                    row.style.opacity = '1';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>

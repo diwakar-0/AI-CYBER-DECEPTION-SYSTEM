@@ -1,0 +1,46 @@
+import pandas as pd
+import numpy as np
+import joblib
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, precision_score, recall_score, classification_report
+
+# Simulated dataset for intrusion detection
+data = {
+    "failed_attempts": np.random.randint(0, 5, 1000),
+    "login_time": np.random.randint(1, 60, 1000),  # in seconds
+    "abuse_score": np.random.randint(0, 100, 1000),  # AbuseIPDB score
+    "label": np.random.choice([0, 1], 1000)  # 0 = Normal, 1 = Suspicious
+}
+
+df = pd.DataFrame(data)
+
+# Splitting into training and testing sets
+X = df[["failed_attempts", "login_time", "abuse_score"]]
+y = df["label"]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train the model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Test the model
+y_pred = model.predict(X_test)
+
+# Calculate metrics
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+
+print(f"Model Accuracy: {accuracy:.2f}")
+print(f"Model Precision: {precision:.2f}")
+print(f"Model Recall: {recall:.2f}")
+
+# Print detailed classification report
+print("\nDetailed Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# Save the model
+joblib.dump(model, "models/intrusion_model.pkl")
+print("Model saved as models/intrusion_model.pkl")

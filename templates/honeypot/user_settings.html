@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .user-info {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .username {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .main-content {
+            background: rgba(0, 20, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .settings-section {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .settings-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            background: rgba(0, 20, 0, 0.9);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+        
+        .profile-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 40, 0, 0.7);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: rgba(0, 255, 0, 0.7);
+            overflow: hidden;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-details {
+            flex-grow: 1;
+        }
+        
+        .btn {
+            background: rgba(0, 100, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 150, 0, 0.7);
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .message {
+            background: rgba(0, 50, 0, 0.7);
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00ff00;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        
+        .notification-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>USER SETTINGS</h1>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">{{ username }}</div>
+                <div class="user-role">{{ level|capitalize }} User</div>
+            </div>
+            
+            <ul>
+                <li><a href="/user-dashboard">📊 Dashboard</a></li>
+                <li><a href="/user-settings" class="active">⚙️ Settings</a></li>
+                <li><a href="#">📁 My Files</a></li>
+                <li><a href="#">📝 Tasks</a></li>
+                <li><a href="#">📨 Messages</a></li>
+                {% if level in ["admin", "system"] %}
+                <li><a href="/file-manager">📁 File Manager</a></li>
+                <li><a href="/system-config">⚙️ System Config</a></li>
+                {% endif %}
+                {% if level == "database" or level in ["admin", "system"] %}
+                <li><a href="/database-admin">🗄️ Database</a></li>
+                {% endif %}
+                <li><a href="/logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            {% if message %}
+            <div class="message">{{ message }}</div>
+            {% endif %}
+            
+            <h2>Account Settings</h2>
+            
+            <form method="POST">
+                <div class="settings-section">
+                    <div class="settings-title">Profile Information</div>
+                    
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            👤
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="form-group">
+                                <label for="display-name">Display Name</label>
+                                <input type="text" id="display-name" name="display_name" class="form-control" value="{{ username }}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" value="{{ username }}@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" name="bio" class="form-control" rows="3">User in the system.</textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-image">Profile Image</label>
+                                <input type="file" id="profile-image" name="profile_image" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <div class="settings-title">Change Password</div>
+                    
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current_password" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new_password" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" name="confirm_password" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <div class="settings-title">Notification Preferences</div>
+                    
+                    <div class="notification-item">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="email-notifications" name="email_notifications" checked>
+                            <label for="email-notifications">Email Notifications</label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="login-alerts" name="login_alerts" checked>
+                            <label for="login-alerts">Login Alerts</label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="system-updates" name="system_updates">
+                            <label for="system-updates">System Updates</label>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Newsletter</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <div class="settings-title">Interface Preferences</div>
+                    
+                    <div class="form-group">
+                        <label for="color-theme">Color Theme</label>
+                        <select id="color-theme" name="color_theme" class="form-control">
+                            <option value="default" selected>Default (Green)</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+                            <option value="red">Red</option>
+                            <option value="dark">Dark Mode</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date-format">Date Format</label>
+                        <select id="date-format" name="date_format" class="form-control">
+                            <option value="Y-m-d" selected>2024-04-15</option>
+                            <option value="m/d/Y">04/15/2024</option>
+                            <option value="d.m.Y">15.04.2024</option>
+                            <option value="d F, Y">15 April, 2024</option>
+                        </select>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="enable-animations" name="enable_animations" checked>
+                            <label for="enable-animations">Enable Animations</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="window.location.href='/user-dashboard'">Cancel</button>
+                    <button type="submit" class="btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Add a slight delay to simulate processing when form is submitted
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.querySelector('.btn[type="submit"]').disabled = true;
+            document.querySelector('.btn[type="submit"]').textContent = 'Saving...';
+            
+            setTimeout(() => {
+                alert('This is a simulated environment. In a real system, your changes would be saved.');
+                window.location.href = '/user-settings?message=Changes+saved+successfully';
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 

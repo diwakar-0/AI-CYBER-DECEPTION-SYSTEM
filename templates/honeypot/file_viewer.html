@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Viewer - {{ filename }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .user-info {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .username {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .main-content {
+            background: rgba(0, 20, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .file-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .file-icon {
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .file-details {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .file-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .file-path {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            background: rgba(0, 100, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 150, 0, 0.7);
+        }
+        
+        .file-content {
+            background: rgba(0, 15, 0, 0.9);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            line-height: 1.5;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            min-height: 400px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .line-numbers {
+            color: rgba(0, 255, 0, 0.5);
+            margin-right: 15px;
+            text-align: right;
+            user-select: none;
+        }
+        
+        .edit-container {
+            margin-top: 20px;
+        }
+        
+        .file-editor {
+            width: 100%;
+            min-height: 400px;
+            background: rgba(0, 15, 0, 0.9);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            font-family: monospace;
+            line-height: 1.5;
+            resize: vertical;
+        }
+        
+        .editor-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .editor-mode {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .mode-btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: rgba(0, 40, 0, 0.7);
+            color: #00ff00;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .mode-btn.active {
+            border-color: #00ff00;
+            background: rgba(0, 60, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FILE VIEWER</h1>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">Admin</div>
+                <div class="user-role">System Access</div>
+            </div>
+            
+            <ul>
+                <li><a href="/user-dashboard">📊 Dashboard</a></li>
+                <li><a href="/file-manager" class="active">📁 File Manager</a></li>
+                <li><a href="/system-config">⚙️ System Config</a></li>
+                <li><a href="#">🔒 Security</a></li>
+                <li><a href="/logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="file-header">
+                <div class="file-info">
+                    <div class="file-icon">📄</div>
+                    <div class="file-details">
+                        <div class="file-name">{{ filename }}</div>
+                        <div class="file-path">/var/www/html/{{ filename }}</div>
+                    </div>
+                </div>
+                
+                <div class="file-actions">
+                    <button class="btn" id="edit-btn">Edit</button>
+                    <button class="btn">Download</button>
+                    <a href="/file-manager" class="btn">Back to Files</a>
+                </div>
+            </div>
+            
+            <div id="view-container">
+                <div class="file-content">{{ content }}</div>
+            </div>
+            
+            <div id="edit-container" class="edit-container" style="display: none;">
+                <div class="editor-toolbar">
+                    <div class="editor-mode">
+                        <div class="mode-btn active" data-mode="text">Text</div>
+                        <div class="mode-btn" data-mode="hex">Hex</div>
+                    </div>
+                    
+                    <div class="save-actions">
+                        <button class="btn" id="save-btn">Save Changes</button>
+                        <button class="btn" id="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+                
+                <textarea class="file-editor" id="file-editor">{{ content }}</textarea>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editBtn = document.getElementById('edit-btn');
+            const saveBtn = document.getElementById('save-btn');
+            const cancelBtn = document.getElementById('cancel-btn');
+            const viewContainer = document.getElementById('view-container');
+            const editContainer = document.getElementById('edit-container');
+            const fileEditor = document.getElementById('file-editor');
+            
+            // Toggle between view and edit mode
+            editBtn.addEventListener('click', function() {
+                viewContainer.style.display = 'none';
+                editContainer.style.display = 'block';
+            });
+            
+            // Cancel editing
+            cancelBtn.addEventListener('click', function() {
+                viewContainer.style.display = 'block';
+                editContainer.style.display = 'none';
+            });
+            
+            // Save changes (simulated)
+            saveBtn.addEventListener('click', function() {
+                const newContent = fileEditor.value;
+                alert('This is a simulated environment. In a real system, your changes would be saved.');
+                
+                // Update the view content with the edited content
+                document.querySelector('.file-content').textContent = newContent;
+                
+                // Switch back to view mode
+                viewContainer.style.display = 'block';
+                editContainer.style.display = 'none';
+            });
+            
+            // Mode switching (simulated)
+            const modeBtns = document.querySelectorAll('.mode-btn');
+            modeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    modeBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const mode = this.getAttribute('data-mode');
+                    if (mode === 'hex') {
+                        alert('Hex editor mode is simulated in this environment.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

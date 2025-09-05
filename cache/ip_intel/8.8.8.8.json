@@ -1,0 +1,2435 @@
+{
+  "ip": "8.8.8.8",
+  "analysis_time": "2025-05-10 17:45:25",
+  "sources": [
+    "AbuseIPDB"
+  ],
+  "risk_score": 25.0,
+  "is_malicious": false,
+  "categories": [
+    "SQL Injection",
+    "Exploited Host",
+    "Web App Attack",
+    "Hacking",
+    "Fraud Orders",
+    "DNS Poisoning",
+    "Web Spam",
+    "Email Spam",
+    "SSH",
+    "Phishing",
+    "Bad Web Bot",
+    "Port Scan",
+    "DDoS Attack",
+    "IoT Targeted",
+    "Brute-Force",
+    "DNS Compromise",
+    "Spoofing"
+  ],
+  "geolocation": {
+    "country": "US",
+    "country_name": "United States of America",
+    "city": "",
+    "latitude": "",
+    "longitude": ""
+  },
+  "is_tor_exit": false,
+  "is_proxy": false,
+  "is_datacenter": false,
+  "whois": null,
+  "related_ips": [],
+  "history": [],
+  "abuseipdb": {
+    "ipAddress": "8.8.8.8",
+    "isPublic": true,
+    "ipVersion": 4,
+    "isWhitelisted": true,
+    "abuseConfidenceScore": 0,
+    "countryCode": "US",
+    "usageType": "Content Delivery Network",
+    "isp": "Google LLC",
+    "domain": "google.com",
+    "hostnames": [
+      "dns.google"
+    ],
+    "isTor": false,
+    "countryName": "United States of America",
+    "totalReports": 227,
+    "numDistinctUsers": 52,
+    "lastReportedAt": "2025-05-10T12:08:02+00:00",
+    "reports": [
+      {
+        "reportedAt": "2025-05-10T07:23:18+00:00",
+        "comment": "Unauthorized connection attempt to port 55080 from 8.8.8.8",
+        "categories": [
+          14
+        ],
+        "reporterId": 63105,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-05-10T01:28:02+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-09T18:06:55+00:00",
+        "comment": "Hundreds of Attempts (at least) to Connect to and Access Firewall Ports",
+        "categories": [
+          14,
+          15,
+          18
+        ],
+        "reporterId": 168827,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-05-09T16:34:43+00:00",
+        "comment": "Unauthorized connection attempt to port 47870 from 8.8.8.8",
+        "categories": [
+          14
+        ],
+        "reporterId": 63105,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-05-09T13:01:22+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-09T01:28:01+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-08T09:01:25+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-08T01:16:02+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-07T13:36:01+00:00",
+        "comment": "2 port probes: 2x tcp/80 (http)\n[srv126]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-05-07T09:22:02+00:00",
+        "comment": "05/07/2025-09:22:01.514327 8.8.8.8 Protocol: 17 ET REMOTE_ACCESS Anydesk Relay Domain (net .anydesk .com) in DNS Lookup",
+        "categories": [
+          15
+        ],
+        "reporterId": 41822,
+        "reporterCountryCode": "AL",
+        "reporterCountryName": "Albania"
+      },
+      {
+        "reportedAt": "2025-05-07T07:00:52+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-07T01:12:07+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-06T08:23:43+00:00",
+        "comment": "Unauthorized connection attempt to port 54016 from 8.8.8.8",
+        "categories": [
+          14
+        ],
+        "reporterId": 63105,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-05-06T00:56:05+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-05T23:00:44+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-05T22:15:51+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-05-05T21:40:25+00:00",
+        "comment": "Unauthorized connection attempt to port 39736 from 8.8.8.8",
+        "categories": [
+          14
+        ],
+        "reporterId": 63105,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-05-05T00:36:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-04T17:00:38+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-04T11:40:22+00:00",
+        "comment": "Reported via API",
+        "categories": [
+          10
+        ],
+        "reporterId": 191229,
+        "reporterCountryCode": "SA",
+        "reporterCountryName": "Saudi Arabia"
+      },
+      {
+        "reportedAt": "2025-05-04T00:36:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-03T13:00:34+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-03T00:36:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-02T00:36:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-05-01T18:00:45+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-05-01T09:03:51+00:00",
+        "comment": "You shall not pass ! Abusive behavior blocked by EF firewall.",
+        "categories": [
+          14,
+          15,
+          18
+        ],
+        "reporterId": 146406,
+        "reporterCountryCode": "SK",
+        "reporterCountryName": "Slovakia"
+      },
+      {
+        "reportedAt": "2025-05-01T00:36:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-30T23:36:00+00:00",
+        "comment": "5 port probes: 3x tcp/80 (http), 2x tcp/443 (https)\n[srv124,srv126,srv125]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-30T15:01:28+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-30T00:20:01+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-29T09:01:32+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-29T00:16:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-28T20:23:22+00:00",
+        "comment": "Automatic report from KZP firewall log.",
+        "categories": [
+          14,
+          15,
+          18
+        ],
+        "reporterId": 173536,
+        "reporterCountryCode": "SK",
+        "reporterCountryName": "Slovakia"
+      },
+      {
+        "reportedAt": "2025-04-28T08:01:30+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-28T00:16:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-27T00:16:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-26T18:01:21+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-26T00:16:00+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-25T13:01:33+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-25T00:00:02+00:00",
+        "comment": "",
+        "categories": [
+          14
+        ],
+        "reporterId": 164965,
+        "reporterCountryCode": "BR",
+        "reporterCountryName": "Brazil"
+      },
+      {
+        "reportedAt": "2025-04-24T22:06:02+00:00",
+        "comment": "3 port probes: 2x tcp/443 (https), tcp/80 (http)\n[srv125,srv124,srv126]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-24T21:50:54+00:00",
+        "comment": "Port probe to tcp/80 (http)\n[srv126]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-24T21:35:58+00:00",
+        "comment": "4 port probes: 3x tcp/443 (https), tcp/80 (http)\n[srv126,srv124,srv125]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-24T21:33:28+00:00",
+        "comment": "Blocked by UFW (TCP on port 443).\nSource port: 41097\nTTL: 109\nPacket length: 52\nTOS: 0x00\n\nThis report (for 8.8.8.8) was generated by:\nhttps://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 55645,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-04-24T19:37:00+00:00",
+        "comment": "Demo",
+        "categories": [
+          16
+        ],
+        "reporterId": 200610,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-04-24T12:01:12+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-23T08:01:27+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-22T14:28:38+00:00",
+        "comment": "Apr 22 10:25:12 [1639]: REFUSED unexpected RCODE resolving 'audienceexposure.com/A/IN': 8.8.8.8#53",
+        "categories": [
+          2,
+          15,
+          18
+        ],
+        "reporterId": 55503,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-04-22T09:22:14+00:00",
+        "comment": "",
+        "categories": [
+          2,
+          3
+        ],
+        "reporterId": 199949,
+        "reporterCountryCode": "AE",
+        "reporterCountryName": "United Arab Emirates"
+      },
+      {
+        "reportedAt": "2025-04-22T03:00:31+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-21T08:37:17+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-21T07:11:08+00:00",
+        "comment": "Report IP",
+        "categories": [
+          10
+        ],
+        "reporterId": 88218,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-20T17:09:52+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-19T15:00:45+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-19T00:01:24+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-18T18:00:28+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-18T05:36:04+00:00",
+        "comment": "Port probe to tcp/80 (http)\n[srv125]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-18T00:01:19+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-17T18:00:29+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-17T12:56:05+00:00",
+        "comment": "(CT) IP 8.8.8.8 (US/United States/-/-/dns.google/[redacted]) found to have 1254 connections",
+        "categories": [
+          4
+        ],
+        "reporterId": 75381,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-17T12:19:00+00:00",
+        "comment": "(CT) IP 8.8.8.8 (US/United States/-/-/dns.google/[redacted]) found to have 1371 connections",
+        "categories": [
+          4
+        ],
+        "reporterId": 75381,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-17T12:01:10+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-17T08:46:14+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-17T00:01:24+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-16T23:33:08+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-16T18:00:29+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-16T13:20:57+00:00",
+        "comment": "Port probe to tcp/80 (http)\n[srv124]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-16T12:36:33+00:00",
+        "comment": "(CT) IP 8.8.8.8 (US/United States/-/-/dns.google/[redacted]) found to have 1001 connections",
+        "categories": [
+          4
+        ],
+        "reporterId": 75381,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-16T12:28:52+00:00",
+        "comment": "",
+        "categories": [
+          15
+        ],
+        "reporterId": 188932,
+        "reporterCountryCode": "CL",
+        "reporterCountryName": "Chile"
+      },
+      {
+        "reportedAt": "2025-04-16T12:01:02+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-16T11:35:57+00:00",
+        "comment": "Port probe to tcp/80 (http)\n[srv126]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-16T07:28:09+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-16T00:01:25+00:00",
+        "comment": "Blocked by UFW [8080/tcp] Source port: 13342 TTL: 52 Packet length: 40 TOS: 0x00  This report was generated by: https://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 192531,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-04-15T16:53:02+00:00",
+        "comment": "Mikrotik port scanner detected. EA4GKQ",
+        "categories": [
+          14
+        ],
+        "reporterId": 52231,
+        "reporterCountryCode": "ES",
+        "reporterCountryName": "Spain"
+      },
+      {
+        "reportedAt": "2025-04-15T11:01:18+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-14T10:00:50+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-12T09:01:01+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-11T18:33:22+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-11T00:00:50+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-10T15:29:22+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-10T06:06:47+00:00",
+        "comment": "Email Abuse happened for sender domain",
+        "categories": [
+          11,
+          17
+        ],
+        "reporterId": 195398,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-09T16:01:05+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-08T19:36:22+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-08T16:00:49+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-08T12:10:19+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-04-08T02:10:13+00:00",
+        "comment": "2025-04-07T09:52:18.702871+0300\nET SCAN NMAP -sA (1)",
+        "categories": [
+          14
+        ],
+        "reporterId": 36449,
+        "reporterCountryCode": "BY",
+        "reporterCountryName": "Belarus"
+      },
+      {
+        "reportedAt": "2025-04-07T17:37:53+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-07T07:54:35+00:00",
+        "comment": "",
+        "categories": [
+          18,
+          22,
+          23
+        ],
+        "reporterId": 177842,
+        "reporterCountryCode": "SG",
+        "reporterCountryName": "Singapore"
+      },
+      {
+        "reportedAt": "2025-04-07T07:03:42+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-05T21:09:28+00:00",
+        "comment": "Test de signalement",
+        "categories": [
+          1,
+          2
+        ],
+        "reporterId": 189721,
+        "reporterCountryCode": "TN",
+        "reporterCountryName": "Tunisia"
+      },
+      {
+        "reportedAt": "2025-04-05T08:13:49+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-05T06:28:05+00:00",
+        "comment": "Blocked by UFW (TCP on port 22).\nSource port: 13341\nTTL: 48\nPacket length: 40\nTOS: 0x00\n\nThis report (for 8.8.8.8) was generated by:\nhttps://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          18,
+          22
+        ],
+        "reporterId": 55645,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-04-04T07:18:35+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-03T22:11:45+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-04-03T05:00:25+00:00",
+        "comment": "Auto-report from pfSense: Detected suspicious activity.",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 186205,
+        "reporterCountryCode": "PL",
+        "reporterCountryName": "Poland"
+      },
+      {
+        "reportedAt": "2025-04-03T02:09:10+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-02T08:24:28+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-04-02T03:00:29+00:00",
+        "comment": "Auto-report from pfSense: Detected suspicious activity.",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 186205,
+        "reporterCountryCode": "PL",
+        "reporterCountryName": "Poland"
+      },
+      {
+        "reportedAt": "2025-04-01T23:09:18+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-04-01T15:41:44+00:00",
+        "comment": "Apr  1 17:41:43 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=121 ID=13107 PROTO=UDP SPT=53 DPT=65395 LEN=97 \nApr  1 17:41:43 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=67 TOS=0x00 PREC=0x00 TTL=121 ID=62219 PROTO=UDP SPT=53 DPT=2830 LEN=47 \nApr  1 17:41:43 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=58 ID=31855 PROTO=UDP SPT=53 DPT=6915 LEN=97 \nApr  1 17:41:43 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=121 ID=23207 PROTO=UDP SPT=53 DPT=4914 LEN=97 \nApr  1 17:41:43 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8\n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-31T23:09:08+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-31T20:33:50+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-30T22:00:53+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-29T17:01:07+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-28T16:01:42+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-28T13:32:10+00:00",
+        "comment": "[UFW] 22823 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-27T20:20:24+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-27T16:50:08+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-03-27T13:02:21+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-27T09:25:53+00:00",
+        "comment": "",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 152852,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-03-26T13:02:03+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-26T08:21:00+00:00",
+        "comment": "Port probe to tcp/80 (http)\n[srv126]",
+        "categories": [
+          14,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-03-25T20:41:56+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-25T15:55:19+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-03-25T11:01:58+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-24T10:02:20+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-24T06:30:07+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-23T11:53:00+00:00",
+        "comment": "Port scanning",
+        "categories": [
+          14
+        ],
+        "reporterId": 41831,
+        "reporterCountryCode": "RU",
+        "reporterCountryName": "Russian Federation"
+      },
+      {
+        "reportedAt": "2025-03-22T17:07:32+00:00",
+        "comment": "*Port Scan* detected from 8.8.8.8 (US/United States/-/-/dns.google/[AS15169 GOOGLE]). 21 hits in the last 3316 seconds",
+        "categories": [
+          14,
+          14,
+          15,
+          18
+        ],
+        "reporterId": 6317,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-22T14:48:06+00:00",
+        "comment": "*Port Scan* detected from 8.8.8.8 (US/United States/-/-/dns.google/[AS15169 GOOGLE]). 21 hits in the last 2392 seconds",
+        "categories": [
+          14,
+          14,
+          15,
+          18
+        ],
+        "reporterId": 6317,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-21T14:00:58+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-20T15:15:19+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-03-20T12:01:10+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-20T09:18:30+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-19T11:02:38+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-19T00:48:16+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-19T00:22:14+00:00",
+        "comment": "Port scanning",
+        "categories": [
+          14
+        ],
+        "reporterId": 41831,
+        "reporterCountryCode": "RU",
+        "reporterCountryName": "Russian Federation"
+      },
+      {
+        "reportedAt": "2025-03-18T15:12:56+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-18T15:12:55+00:00",
+        "comment": "Mar 18 16:12:53 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=57 ID=49248 PROTO=UDP SPT=53 DPT=18402 LEN=135 \nMar 18 16:12:53 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=129 TOS=0x00 PREC=0x00 TTL=58 ID=30738 PROTO=UDP SPT=53 DPT=37765 LEN=109 \nMar 18 16:12:53 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=112 ID=59211 PROTO=UDP SPT=53 DPT=27174 LEN=135 \nMar 18 16:12:53 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=58 ID=63263 PROTO=UDP SPT=53 DPT=58480 LEN=135 \nMar 18 16:12:53 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00\n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-18T13:35:10+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-03-18T09:01:45+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-17T21:50:16+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-17T15:51:38+00:00",
+        "comment": "",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 192837,
+        "reporterCountryCode": "FR",
+        "reporterCountryName": "France"
+      },
+      {
+        "reportedAt": "2025-03-17T08:01:49+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-17T00:08:13+00:00",
+        "comment": "Auto-report from pfSense: Detected suspicious activity.",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 186205,
+        "reporterCountryCode": "PL",
+        "reporterCountryName": "Poland"
+      },
+      {
+        "reportedAt": "2025-03-15T14:01:55+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-14T23:26:15+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-14T09:02:30+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-13T20:21:33+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-13T05:04:01+00:00",
+        "comment": "03/13/2025-05:04:00.983547 8.8.8.8 Protocol: 17 ET REMOTE_ACCESS Anydesk Relay Domain (net .anydesk .com) in DNS Lookup",
+        "categories": [
+          15
+        ],
+        "reporterId": 41822,
+        "reporterCountryCode": "AL",
+        "reporterCountryName": "Albania"
+      },
+      {
+        "reportedAt": "2025-03-12T18:10:46+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-12T12:02:33+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-12T07:12:18+00:00",
+        "comment": "03/12/2025-07:12:18.530209 8.8.8.8 Protocol: 17 ET REMOTE_ACCESS Anydesk Relay Domain (net .anydesk .com) in DNS Lookup",
+        "categories": [
+          15
+        ],
+        "reporterId": 41822,
+        "reporterCountryCode": "AL",
+        "reporterCountryName": "Albania"
+      },
+      {
+        "reportedAt": "2025-03-11T12:01:49+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-10T11:28:16+00:00",
+        "comment": "03/10/2025-11:28:00.539050 8.8.8.8 Protocol: 17 ET REMOTE_ACCESS Anydesk Relay Domain (net .anydesk .com) in DNS Lookup",
+        "categories": [
+          15
+        ],
+        "reporterId": 41822,
+        "reporterCountryCode": "AL",
+        "reporterCountryName": "Albania"
+      },
+      {
+        "reportedAt": "2025-03-10T11:01:04+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-09T16:33:14+00:00",
+        "comment": "[New] Noxious/Nuisible/\u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0439 Host.",
+        "categories": [
+          14,
+          20
+        ],
+        "reporterId": 53887,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-08T13:01:07+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-07T20:15:05+00:00",
+        "comment": "Unsollicted Connect (Location-1)",
+        "categories": [
+          14
+        ],
+        "reporterId": 35147,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-03-07T20:00:48+00:00",
+        "comment": "[UFW] 64375 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-07T11:02:43+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-06T23:18:16+00:00",
+        "comment": "",
+        "categories": [
+          2,
+          3
+        ],
+        "reporterId": 116610,
+        "reporterCountryCode": "JP",
+        "reporterCountryName": "Japan"
+      },
+      {
+        "reportedAt": "2025-03-06T17:53:03+00:00",
+        "comment": "Portscan",
+        "categories": [
+          14
+        ],
+        "reporterId": 56919,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-06T17:52:57+00:00",
+        "comment": "[UFW] 13975 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-06T15:05:20+00:00",
+        "comment": "TeamViewer RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-03-05T18:43:44+00:00",
+        "comment": "Banned by Fail2Ban",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 190490,
+        "reporterCountryCode": "SK",
+        "reporterCountryName": "Slovakia"
+      },
+      {
+        "reportedAt": "2025-03-05T15:00:04+00:00",
+        "comment": "Unsollicted Connect (Location-1)",
+        "categories": [
+          14
+        ],
+        "reporterId": 35147,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-03-05T14:58:13+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-05T13:03:27+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-05T09:13:28+00:00",
+        "comment": "[UFW] 50915 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-04T19:54:36+00:00",
+        "comment": "Mar  4 20:54:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=121 ID=32893 PROTO=UDP SPT=53 DPT=6961 LEN=97 \n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-04T19:54:35+00:00",
+        "comment": "[UFW] 26796 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-04T11:02:22+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-04T09:07:54+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-03T12:37:03+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-03T12:30:10+00:00",
+        "comment": "Unsollicted Connect (Location-1)",
+        "categories": [
+          14
+        ],
+        "reporterId": 35147,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-03-03T12:21:22+00:00",
+        "comment": "[UFW] 21161 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-03T12:20:59+00:00",
+        "comment": "Mar  3 13:20:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=112 ID=38385 PROTO=UDP SPT=53 DPT=18402 LEN=97 \nMar  3 13:20:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=58 ID=49291 PROTO=UDP SPT=53 DPT=1961 LEN=97 \nMar  3 13:20:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=122 ID=46603 PROTO=UDP SPT=53 DPT=22651 LEN=97 \nMar  3 13:20:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=57 ID=28682 PROTO=UDP SPT=53 DPT=24183 LEN=97 \nMar  3 13:20:35 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC\n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-03-03T10:02:58+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-03-02T00:45:17+00:00",
+        "comment": "Auto-report from pfSense: Detected suspicious activity.",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 186205,
+        "reporterCountryCode": "PL",
+        "reporterCountryName": "Poland"
+      },
+      {
+        "reportedAt": "2025-03-01T22:47:47+00:00",
+        "comment": "Malicious activity detected",
+        "categories": [
+          18
+        ],
+        "reporterId": 185508,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-03-01T14:03:30+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-28T13:02:49+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-27T16:54:36+00:00",
+        "comment": "Example attack from 8.8.8.8, port 22",
+        "categories": [
+          18
+        ],
+        "reporterId": 189688,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-27T16:53:30+00:00",
+        "comment": "Example attack from 8.8.8.8, port 22",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 189688,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-27T16:39:03+00:00",
+        "comment": "Description for 8.8.8.8",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 189688,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-27T12:02:56+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-26T11:03:13+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-25T16:25:19+00:00",
+        "comment": "ConnectWise RMM - DNS (Response)",
+        "categories": [
+          15
+        ],
+        "reporterId": 27827,
+        "reporterCountryCode": "CA",
+        "reporterCountryName": "Canada"
+      },
+      {
+        "reportedAt": "2025-02-25T11:02:48+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-25T02:22:15+00:00",
+        "comment": "Unauthorized connection attempt",
+        "categories": [
+          14,
+          15,
+          20
+        ],
+        "reporterId": 134282,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-02-24T14:23:03+00:00",
+        "comment": "ID: 1305874261 | PORT: 64668 | https://8-8-8-8.scanthe.net",
+        "categories": [
+          14
+        ],
+        "reporterId": 175246,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-24T14:22:00+00:00",
+        "comment": "*Port Scan* detected from 8.8.8.8 (US/United States/dns.google).",
+        "categories": [
+          14
+        ],
+        "reporterId": 87257,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-24T14:20:40+00:00",
+        "comment": "[UFW] 21211 (UDP)",
+        "categories": [
+          14
+        ],
+        "reporterId": 176336,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-24T14:20:33+00:00",
+        "comment": "Feb 24 15:20:32 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=121 ID=17073 PROTO=UDP SPT=53 DPT=16942 LEN=97 \nFeb 24 15:20:32 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=58 ID=2877 PROTO=UDP SPT=53 DPT=2129 LEN=97 \nFeb 24 15:20:32 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=56 ID=40391 PROTO=UDP SPT=53 DPT=27174 LEN=97 \nFeb 24 15:20:32 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=117 TOS=0x00 PREC=0x00 TTL=122 ID=21483 PROTO=UDP SPT=53 DPT=58480 LEN=97 \n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-02-24T10:03:22+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-23T23:38:28+00:00",
+        "comment": "Testing API integration from Fail2Ban",
+        "categories": [
+          18,
+          22
+        ],
+        "reporterId": 188812,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-22T19:01:52+00:00",
+        "comment": "Automatic report from EF firewall log.",
+        "categories": [
+          14,
+          15,
+          18
+        ],
+        "reporterId": 146406,
+        "reporterCountryCode": "SK",
+        "reporterCountryName": "Slovakia"
+      },
+      {
+        "reportedAt": "2025-02-22T08:03:15+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-21T10:07:51+00:00",
+        "comment": "Reported for conducting DDoS attacks against services.",
+        "categories": [
+          4
+        ],
+        "reporterId": 86138,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-02-21T08:03:12+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-20T21:10:07+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-19T21:09:07+00:00",
+        "comment": "Brute-Force Telnet (Port 23,2323)",
+        "categories": [
+          18
+        ],
+        "reporterId": 18163,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-19T20:01:35+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-19T08:10:18+00:00",
+        "comment": "Too many invalid connections dport: 53",
+        "categories": [
+          14,
+          18
+        ],
+        "reporterId": 162140,
+        "reporterCountryCode": "RO",
+        "reporterCountryName": "Romania"
+      },
+      {
+        "reportedAt": "2025-02-19T07:33:12+00:00",
+        "comment": "Feb 19 08:33:10 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=121 ID=61573 PROTO=UDP SPT=53 DPT=64816 LEN=135 \nFeb 19 08:33:10 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x80 TTL=123 ID=15559 PROTO=UDP SPT=53 DPT=14945 LEN=135 \nFeb 19 08:33:11 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=121 ID=28262 PROTO=UDP SPT=53 DPT=64023 LEN=135 \nFeb 19 08:33:11 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:00 SRC=8.8.8.8 DST=173.212.223.67 LEN=155 TOS=0x00 PREC=0x00 TTL=56 ID=12736 PROTO=UDP SPT=53 DPT=44621 LEN=135 \nFeb 19 08:33:11 sthoyer kernel: [IPTables-Dropped-I] IN=eth0 OUT= MAC=00:50:56:43:00:af:c0:69:11:b4:82:23:08:\n...",
+        "categories": [
+          14
+        ],
+        "reporterId": 70857,
+        "reporterCountryCode": "DE",
+        "reporterCountryName": "Germany"
+      },
+      {
+        "reportedAt": "2025-02-18T23:06:04+00:00",
+        "comment": "5 port probes: 2x tcp/443 (https), 3x tcp/80 (http)\n[srv126,srv125,srv124]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-18T23:03:19+00:00",
+        "comment": "IPS Detection: 8.8.8.8 -> DPT: 80",
+        "categories": [
+          14
+        ],
+        "reporterId": 94225,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-18T14:03:24+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-18T07:03:25+00:00",
+        "comment": "Testing",
+        "categories": [
+          7
+        ],
+        "reporterId": 28686,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-18T05:18:06+00:00",
+        "comment": "Reported for suspected involvement in DDoS attack activities.",
+        "categories": [
+          4
+        ],
+        "reporterId": 86138,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-02-17T21:21:04+00:00",
+        "comment": "10 port probes: 5x tcp/80 (http), 5x tcp/443 (https)\n[srv124,srv125,srv126]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-17T21:06:12+00:00",
+        "comment": "8 port probes: 5x tcp/80 (http), 3x tcp/443 (https)\n[srv126,srv124]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-17T20:58:32+00:00",
+        "comment": "Blocked by UFW (TCP on port 80).\nSource port: 6596\nTTL: 97\nPacket length: 52\nTOS: 0x00\n\nThis report (for 8.8.8.8) was generated by:\nhttps://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 55645,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-17T13:01:43+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-17T00:51:03+00:00",
+        "comment": "Port probe to tcp/23743\n[srv128]",
+        "categories": [
+          14
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-16T12:01:43+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-15T10:11:38+00:00",
+        "comment": "Port Scanning",
+        "categories": [
+          14
+        ],
+        "reporterId": 102992,
+        "reporterCountryCode": "ID",
+        "reporterCountryName": "Indonesia"
+      },
+      {
+        "reportedAt": "2025-02-14T19:23:40+00:00",
+        "comment": "Abusive activity detected",
+        "categories": [
+          18
+        ],
+        "reporterId": 145853,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-14T19:05:59+00:00",
+        "comment": "4 port probes: tcp/80 (http), 3x tcp/443 (https)\n[srv124,srv126]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-14T18:52:01+00:00",
+        "comment": "Excessive connections to http/https ports",
+        "categories": [
+          4
+        ],
+        "reporterId": 117247,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-14T18:50:00+00:00",
+        "comment": "IPS Detection: 8.8.8.8 -> DPT: 443",
+        "categories": [
+          14
+        ],
+        "reporterId": 94225,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-14T16:01:50+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-13T14:03:45+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-13T10:06:11+00:00",
+        "comment": "9 port probes: 6x tcp/80 (http), 3x tcp/443 (https)\n[srv126,srv125,srv124]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-13T09:58:12+00:00",
+        "comment": "ID: 1202991597 | PORT: 443 | https://8-8-8-8.scanthe.net",
+        "categories": [
+          14
+        ],
+        "reporterId": 175246,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-13T09:52:02+00:00",
+        "comment": "Excessive connections to http/https ports",
+        "categories": [
+          4
+        ],
+        "reporterId": 117247,
+        "reporterCountryCode": "US",
+        "reporterCountryName": "United States of America"
+      },
+      {
+        "reportedAt": "2025-02-13T09:51:37+00:00",
+        "comment": "SYN_RECV",
+        "categories": [
+          18,
+          21
+        ],
+        "reporterId": 10583,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-13T09:51:13+00:00",
+        "comment": "12 port probes: 5x tcp/443 (https), 7x tcp/80 (http)\n[srv124,srv126,srv125]",
+        "categories": [
+          14,
+          18,
+          19,
+          21
+        ],
+        "reporterId": 25670,
+        "reporterCountryCode": "NL",
+        "reporterCountryName": "Netherlands"
+      },
+      {
+        "reportedAt": "2025-02-13T09:38:39+00:00",
+        "comment": "Blocked by UFW (TCP on port 80).\nSource port: 65459\nTTL: 95\nPacket length: 52\nTOS: 0x00\n\nThis report (for 8.8.8.8) was generated by:\nhttps://github.com/sefinek/UFW-AbuseIPDB-Reporter",
+        "categories": [
+          14,
+          21
+        ],
+        "reporterId": 55645,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-13T09:38:25+00:00",
+        "comment": "IPS Detection: 8.8.8.8 -> DPT: 80",
+        "categories": [
+          14
+        ],
+        "reporterId": 94225,
+        "reporterCountryCode": "GB",
+        "reporterCountryName": "United Kingdom of Great Britain and Northern Ireland"
+      },
+      {
+        "reportedAt": "2025-02-13T06:09:55+00:00",
+        "comment": "Detected UDP Flood attack.",
+        "categories": [
+          14,
+          18
+        ],
+        "reporterId": 185808,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-02-13T04:59:29+00:00",
+        "comment": "Detected UDP Flood attack from this IP using PingHawk.",
+        "categories": [
+          14,
+          18
+        ],
+        "reporterId": 185808,
+        "reporterCountryCode": "IN",
+        "reporterCountryName": "India"
+      },
+      {
+        "reportedAt": "2025-02-12T13:01:43+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-12T08:13:25+00:00",
+        "comment": "\u68c0\u6d4b\u5230\u6076\u610f\u6d3b\u52a8",
+        "categories": [
+          18
+        ],
+        "reporterId": 186469,
+        "reporterCountryCode": "TW",
+        "reporterCountryName": "Taiwan"
+      },
+      {
+        "reportedAt": "2025-02-11T11:01:41+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      },
+      {
+        "reportedAt": "2025-02-10T07:02:21+00:00",
+        "comment": "FortiGate detected DOS from IP 8.8.8.8",
+        "categories": [
+          4
+        ],
+        "reporterId": 156039,
+        "reporterCountryCode": "CH",
+        "reporterCountryName": "Switzerland"
+      }
+    ]
+  },
+  "risk_level": "Low"
+}

@@ -1,0 +1,44 @@
+{
+  "ip": "198.20.70.114",
+  "analysis_time": "2025-05-10 17:48:50",
+  "sources": [
+    "AbuseIPDB"
+  ],
+  "risk_score": 0.0,
+  "is_malicious": false,
+  "categories": [],
+  "geolocation": {
+    "country": "US",
+    "country_name": "United States of America",
+    "city": "",
+    "latitude": "",
+    "longitude": ""
+  },
+  "is_tor_exit": false,
+  "is_proxy": false,
+  "is_datacenter": true,
+  "whois": null,
+  "related_ips": [],
+  "history": [],
+  "abuseipdb": {
+    "ipAddress": "198.20.70.114",
+    "isPublic": true,
+    "ipVersion": 4,
+    "isWhitelisted": false,
+    "abuseConfidenceScore": 0,
+    "countryCode": "US",
+    "usageType": "Data Center/Web Hosting/Transit",
+    "isp": "Shodan LLC",
+    "domain": "shodan.io",
+    "hostnames": [
+      "114.70.20.198.unassigned.ord.singlehop.net"
+    ],
+    "isTor": false,
+    "countryName": "United States of America",
+    "totalReports": 0,
+    "numDistinctUsers": 0,
+    "lastReportedAt": "2023-12-09T06:55:53+00:00",
+    "reports": []
+  },
+  "risk_level": "Minimal"
+}

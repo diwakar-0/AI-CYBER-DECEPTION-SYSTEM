@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .user-info {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .username {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .main-content {
+            background: rgba(0, 20, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .file-browser {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .path-nav {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 40, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .path-input {
+            flex-grow: 1;
+            background: rgba(0, 20, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+            padding: 8px 15px;
+            margin-right: 10px;
+        }
+        
+        .btn {
+            background: rgba(0, 100, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 150, 0, 0.7);
+        }
+        
+        .file-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .action-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .file-list {
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+        }
+        
+        th {
+            background: rgba(0, 40, 0, 0.7);
+            color: #00ff00;
+        }
+        
+        tr:hover {
+            background: rgba(0, 50, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .file-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+        
+        .file-actions a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        
+        .file-actions a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-info {
+            background: rgba(0, 30, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: rgba(0, 255, 0, 0.7);
+            margin-top: 20px;
+        }
+        
+        .upload-section {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .dropzone {
+            border: 2px dashed rgba(0, 255, 0, 0.3);
+            border-radius: 5px;
+            padding: 25px;
+            text-align: center;
+            margin: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .dropzone:hover {
+            border-color: rgba(0, 255, 0, 0.6);
+            background: rgba(0, 255, 0, 0.05);
+        }
+        
+        .file-browser {
+            position: relative;
+        }
+        
+        .loading-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            z-index: 10;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 255, 0, 0.3);
+            border-top: 4px solid #00ff00;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FILE MANAGER</h1>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">{{ username }}</div>
+                <div class="user-role">{{ level }} Access</div>
+            </div>
+            
+            <ul>
+                <li><a href="/user-dashboard">📊 Dashboard</a></li>
+                <li><a href="#" class="active">📁 File Manager</a></li>
+                <li><a href="/system-config">⚙️ System Config</a></li>
+                <li><a href="#">🔒 Security</a></li>
+                <li><a href="/database-admin">🗄️ Database</a></li>
+                <li><a href="/logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <h2>File System Explorer</h2>
+            
+            <div class="file-browser">
+                <div class="loading-overlay">
+                    <div class="spinner"></div>
+                </div>
+                
+                <div class="path-nav">
+                    <input type="text" class="path-input" value="/var/www/html/" id="current-path">
+                    <button class="btn" onclick="changePath()">Go</button>
+                </div>
+                
+                <div class="file-actions">
+                    <div class="action-group">
+                        <button class="btn" onclick="createFolder()">New Folder</button>
+                        <button class="btn" onclick="refreshFiles()">Refresh</button>
+                    </div>
+                    <div class="action-group">
+                        <select id="file-sort" class="path-input" style="width: auto;">
+                            <option value="name">Sort by Name</option>
+                            <option value="date">Sort by Date</option>
+                            <option value="size">Sort by Size</option>
+                            <option value="type">Sort by Type</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="file-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;"></th>
+                                <th>Name</th>
+                                <th>Size</th>
+                                <th>Modified</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="navigateFolder('..')">
+                                <td><span class="file-icon">📁</span></td>
+                                <td>..</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                            {% for file in files %}
+                            <tr onclick="{% if file.type == 'dir' %}navigateFolder('{{ file.name }}'){% else %}viewFile('{{ file.name }}'){% endif %}">
+                                <td><span class="file-icon">{% if file.type == 'dir' %}📁{% else %}📄{% endif %}</span></td>
+                                <td>{{ file.name }}</td>
+                                <td>{{ file.size }}</td>
+                                <td>{{ file.modified }}</td>
+                                <td class="file-actions">
+                                    {% if file.type == 'file' %}
+                                    <a href="/files/view?file={{ file.name }}">View</a> | 
+                                    <a href="#" onclick="event.stopPropagation(); downloadFile('{{ file.name }}')">Download</a>
+                                    {% else %}
+                                    <a href="#" onclick="event.stopPropagation(); navigateFolder('{{ file.name }}')">Open</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="footer-info">
+                    <strong>Free Space:</strong> 13.8 GB &nbsp;|&nbsp; <strong>Used Space:</strong> 48.2 GB &nbsp;|&nbsp; <strong>Total Items:</strong> {{ files|length }}
+                </div>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Upload Files</h3>
+                <div class="dropzone" id="upload-dropzone">
+                    <p>Drag files here or click to select files</p>
+                    <input type="file" id="file-upload" style="display: none;" multiple>
+                </div>
+                <button class="btn" onclick="uploadFiles()" style="float: right; margin-top: 10px;">Upload Files</button>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Variables to track navigation
+        let currentPath = "/var/www/html/";
+        
+        // Functions to simulate file system navigation
+        function navigateFolder(folder) {
+            showLoading();
+            
+            setTimeout(() => {
+                if (folder === '..') {
+                    // Go up one directory
+                    const pathParts = currentPath.split('/').filter(p => p);
+                    pathParts.pop();
+                    currentPath = '/' + pathParts.join('/') + '/';
+                } else {
+                    // Go into subdirectory
+                    currentPath += folder + '/';
+                }
+                
+                document.getElementById('current-path').value = currentPath;
+                hideLoading();
+                
+                // In a real implementation, this would fetch the contents of the new directory
+                console.log(`Navigated to: ${currentPath}`);
+            }, 500 + Math.random() * 1000); // Simulate loading delay
+        }
+        
+        function changePath() {
+            showLoading();
+            currentPath = document.getElementById('current-path').value;
+            
+            // Ensure path ends with slash
+            if (!currentPath.endsWith('/')) {
+                currentPath += '/';
+                document.getElementById('current-path').value = currentPath;
+            }
+            
+            setTimeout(() => {
+                hideLoading();
+                console.log(`Changed path to: ${currentPath}`);
+            }, 500 + Math.random() * 1000); // Simulate loading delay
+        }
+        
+        function viewFile(filename) {
+            const filePath = currentPath + filename;
+            window.location.href = `/files/view?file=${filename}`;
+        }
+        
+        function downloadFile(filename) {
+            const filePath = currentPath + filename;
+            alert(`Downloading: ${filePath}`);
+            // In a real implementation, this would trigger a file download
+        }
+        
+        function createFolder() {
+            const folderName = prompt("Enter folder name:");
+            if (folderName) {
+                alert(`Created folder: ${currentPath}${folderName}/`);
+                // In a real implementation, this would create a new folder and refresh the view
+            }
+        }
+        
+        function refreshFiles() {
+            showLoading();
+            setTimeout(() => {
+                hideLoading();
+                console.log(`Refreshed directory: ${currentPath}`);
+            }, 500 + Math.random() * 1000); // Simulate loading delay
+        }
+        
+        function uploadFiles() {
+            document.getElementById('file-upload').click();
+        }
+        
+        // Loading overlay functions
+        function showLoading() {
+            const overlay = document.querySelector('.loading-overlay');
+            overlay.style.display = 'flex';
+        }
+        
+        function hideLoading() {
+            const overlay = document.querySelector('.loading-overlay');
+            overlay.style.display = 'none';
+        }
+        
+        // Set up file upload handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropzone = document.getElementById('upload-dropzone');
+            const fileInput = document.getElementById('file-upload');
+            
+            dropzone.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            dropzone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                dropzone.style.borderColor = '#00ff00';
+                dropzone.style.background = 'rgba(0, 255, 0, 0.1)';
+            });
+            
+            dropzone.addEventListener('dragleave', function() {
+                dropzone.style.borderColor = 'rgba(0, 255, 0, 0.3)';
+                dropzone.style.background = 'transparent';
+            });
+            
+            dropzone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                dropzone.style.borderColor = 'rgba(0, 255, 0, 0.3)';
+                dropzone.style.background = 'transparent';
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    alert(`Ready to upload ${files.length} file(s) to ${currentPath}`);
+                    // In a real implementation, this would handle the file upload
+                }
+            });
+            
+            fileInput.addEventListener('change', function() {
+                const files = fileInput.files;
+                if (files.length > 0) {
+                    alert(`Ready to upload ${files.length} file(s) to ${currentPath}`);
+                    // In a real implementation, this would handle the file upload
+                }
+            });
+            
+            // Initial path
+            document.getElementById('current-path').value = currentPath;
+        });
+    </script>
+</body>
+</html> 

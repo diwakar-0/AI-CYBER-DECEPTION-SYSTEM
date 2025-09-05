@@ -1,0 +1,150 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:16] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:26] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:26] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:26] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:26] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:07:26] "[33mGET /api/login_attempts HTTP/1.1[0m" 404 -
+INFO:root:[2025-03-31 21:11:04.392428] Suspicious Activity from 127.0.0.1: Invalid credentials
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:04] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:07] "GET / HTTP/1.1" 200 -
+INFO:root:[2025-03-31 21:11:32.942872] Suspicious Activity from 127.0.0.1: Invalid credentials
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:32] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:42] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:42] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:42] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:11:42] "[33mGET /api/login_attempts HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:12:56] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:12:56] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:12:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:12:56] "[33mGET /api/login_attempts HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:13:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:13:33] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:14:10] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:14:10] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:14:10] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:14:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Mar/2025 21:14:10] "[33mGET /api/login_attempts HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:14] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:14] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:26] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:42] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+WARNING:root:127.0.0.1 - Login attempt after timeout
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:24:51] "[31m[1mPOST / HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:05] "[31m[1mPOST / HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:15] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:15] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:15] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:22] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:22] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:25:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:40] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:42] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:42] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:47] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:47] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:27:57] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:28:10] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:28:18] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:28:18] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:28:18] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:01] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:01] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:25] "[31m[1mPOST / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:40] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:07:40] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-874-061
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:32] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:32] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:39] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:root:127.0.0.1 - Successful login
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:59] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:59] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 22:09:59] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+{"ip": "127.0.0.1", "time": "2025-04-21 22:26:09", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 20:54:30", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 20:54:38", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 20:59:08", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 20:59:18", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:02:52", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:03:04", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:12:53", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:13:21", "user": "admin", "status": "Suspected Attacker (delay/attempts)"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:13:23", "user": "admin", "status": "Suspected Attacker (delay/attempts)"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:26:59", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:34:18", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-02 21:38:39", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:31:01", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:35:59", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:37:22", "user": "admin", "status": "Suspected Attacker (AI)"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:37:28", "user": "admin", "status": "Suspected Attacker (delay/attempts)"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:51:40", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:55:55", "user": "user", "status": "Normal User Attempt"}
+{"ip": "127.0.0.1", "time": "2025-05-03 09:56:34", "user": "user", "status": "Suspected Attacker (delay/attempts)"}
+{"ip": "127.0.0.1", "time": "2025-05-03 10:26:59", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:23:58", "user": "test", "status": "Honey Credential Hit (low)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:25:45", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:27:31", "user": "admin", "status": "Honey Credential Hit (admin)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:28:29", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:28:53", "user": "root", "status": "Honey Credential Hit (system)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:29:30", "user": "dbadmin", "status": "Honey Credential Hit (database)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:29:59", "user": "admin", "status": "Suspected Attacker (delay/attempts)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:41:24", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 17:45:16", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 20:53:24", "user": "admin", "status": "Honey Credential Hit (admin)"}
+{"ip": "127.0.0.1", "time": "2025-05-10 22:24:27", "user": "admin ", "status": "Login unauthorized"}
+{"ip": "127.0.0.1", "time": "2025-05-10 22:25:24", "user": "admin", "status": "Admin Login"}
+{"ip": "127.0.0.1", "time": "2025-05-10 22:38:22", "user": "root ", "status": "Login unauthorized"}
+{"ip": "127.0.0.1", "time": "2025-05-10 22:38:41", "user": "root", "status": "Honey Credential Hit (system)"}

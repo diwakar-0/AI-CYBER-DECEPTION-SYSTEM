@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backup Files Directory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .directory-listing {
+            background: rgba(0, 20, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: monospace;
+        }
+        
+        .directory-header {
+            display: grid;
+            grid-template-columns: 35px 250px 120px 180px 150px;
+            padding: 10px 5px;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .file-row {
+            display: grid;
+            grid-template-columns: 35px 250px 120px 180px 150px;
+            padding: 8px 5px;
+            border-bottom: 1px dotted rgba(0, 255, 0, 0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .file-row:hover {
+            background: rgba(0, 40, 0, 0.5);
+        }
+        
+        .file-icon {
+            color: #00aa00;
+            font-size: 16px;
+        }
+        
+        .file-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .file-name a {
+            color: #00dddd;
+            text-decoration: none;
+        }
+        
+        .file-name a:hover {
+            text-decoration: underline;
+        }
+        
+        .file-size {
+            text-align: right;
+            padding-right: 20px;
+        }
+        
+        .file-date {
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .file-perms {
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: rgba(0, 30, 0, 0.5);
+            border-radius: 5px;
+        }
+        
+        .breadcrumb a {
+            color: #00dddd;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .page-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .warning-banner {
+            background: rgba(50, 40, 0, 0.5);
+            border: 1px solid rgba(255, 255, 0, 0.3);
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BACKUP FILES</h1>
+    </div>
+    
+    <div class="content">
+        <div class="breadcrumb">
+            <a href="/">Home</a> / <a href="/backup">Backup</a> / Files
+        </div>
+        
+        <div class="page-title">
+            <h2>System Backup Directory</h2>
+        </div>
+        
+        <div class="warning-banner">
+            Notice: This directory contains system backup files. Access restricted to authorized personnel only.
+        </div>
+        
+        <div class="directory-listing">
+            <div class="directory-header">
+                <div></div>
+                <div>Name</div>
+                <div>Size</div>
+                <div>Last Modified</div>
+                <div>Permissions</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📁</div>
+                <div class="file-name"><a href="../">..</a></div>
+                <div class="file-size">-</div>
+                <div class="file-date">-</div>
+                <div class="file-perms">drwxr-xr-x</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">backup_20230412.tar.gz</a></div>
+                <div class="file-size">1.2 GB</div>
+                <div class="file-date">Apr 12 2023 03:15</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">backup_20230315.tar.gz</a></div>
+                <div class="file-size">1.1 GB</div>
+                <div class="file-date">Mar 15 2023 03:15</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">backup_20230215.tar.gz</a></div>
+                <div class="file-size">1.0 GB</div>
+                <div class="file-date">Feb 15 2023 03:15</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">db_dump_20230412.sql</a></div>
+                <div class="file-size">250 MB</div>
+                <div class="file-date">Apr 12 2023 03:15</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">db_dump_20230315.sql</a></div>
+                <div class="file-size">220 MB</div>
+                <div class="file-date">Mar 15 2023 03:15</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">.env.backup</a></div>
+                <div class="file-size">2.3 KB</div>
+                <div class="file-date">Jan 1 2023 12:35</div>
+                <div class="file-perms">-rw-r-----</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">config.php.bak</a></div>
+                <div class="file-size">4.7 KB</div>
+                <div class="file-date">Jan 1 2023 12:35</div>
+                <div class="file-perms">-rw-r-----</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">credentials.txt</a></div>
+                <div class="file-size">1.2 KB</div>
+                <div class="file-date">Jan 1 2023 12:35</div>
+                <div class="file-perms">-rw-------</div>
+            </div>
+            
+            <div class="file-row">
+                <div class="file-icon">📄</div>
+                <div class="file-name"><a href="#">README.md</a></div>
+                <div class="file-size">356 B</div>
+                <div class="file-date">Jan 1 2023 12:30</div>
+                <div class="file-perms">-rw-r--r--</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Log all click attempts
+        document.querySelectorAll('.file-name a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const fileName = this.textContent;
+                
+                // We could send this to server but for this honeypot
+                // the mere access to the page is already logged
+                console.log('File access attempt:', fileName);
+                
+                // Redirect to login after 1 second
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html> 

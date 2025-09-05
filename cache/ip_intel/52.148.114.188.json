@@ -1,0 +1,42 @@
+{
+  "ip": "52.148.114.188",
+  "analysis_time": "2025-05-10 17:48:48",
+  "sources": [
+    "AbuseIPDB"
+  ],
+  "risk_score": 0.0,
+  "is_malicious": false,
+  "categories": [],
+  "geolocation": {
+    "country": "SG",
+    "country_name": "Singapore",
+    "city": "",
+    "latitude": "",
+    "longitude": ""
+  },
+  "is_tor_exit": false,
+  "is_proxy": false,
+  "is_datacenter": true,
+  "whois": null,
+  "related_ips": [],
+  "history": [],
+  "abuseipdb": {
+    "ipAddress": "52.148.114.188",
+    "isPublic": true,
+    "ipVersion": 4,
+    "isWhitelisted": null,
+    "abuseConfidenceScore": 0,
+    "countryCode": "SG",
+    "usageType": "Data Center/Web Hosting/Transit",
+    "isp": "Microsoft Corporation",
+    "domain": "microsoft.com",
+    "hostnames": [],
+    "isTor": false,
+    "countryName": "Singapore",
+    "totalReports": 0,
+    "numDistinctUsers": 0,
+    "lastReportedAt": null,
+    "reports": []
+  },
+  "risk_level": "Minimal"
+}

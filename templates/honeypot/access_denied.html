@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Denied</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .access-denied-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(50, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+        }
+        
+        .access-icon {
+            font-size: 80px;
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        
+        .access-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+        
+        .access-message {
+            margin-bottom: 30px;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: rgba(50, 0, 0, 0.7);
+            color: #ffffff;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .back-btn:hover {
+            background: rgba(100, 0, 0, 0.7);
+        }
+        
+        .details {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 0, 0, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: left;
+        }
+        
+        .detail-item {
+            margin-bottom: 5px;
+        }
+        
+        .access-log {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            color: #ff5555;
+            font-family: monospace;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SYSTEM SECURITY</h1>
+    </div>
+    
+    <div class="access-denied-container">
+        <div class="access-icon">⛔</div>
+        <h2 class="access-title">ACCESS DENIED</h2>
+        
+        <div class="access-message">
+            You do not have permission to access this resource. 
+            This incident has been logged and may be reported to system administrators.
+        </div>
+        
+        <a href="/user-dashboard" class="back-btn">Return to Dashboard</a>
+        
+        <div class="details">
+            <div class="detail-item"><strong>Error Code:</strong> ERR_INSUFFICIENT_PRIVILEGES</div>
+            <div class="detail-item"><strong>Timestamp:</strong> {{ now }}</div>
+            <div class="detail-item"><strong>IP Address:</strong> {{ request.remote_addr }}</div>
+            <div class="detail-item"><strong>User Agent:</strong> {{ request.headers.get('User-Agent') }}</div>
+            
+            <div class="access-log">
+                [{{ now }}] ALERT: Unauthorized access attempt detected
+                User: {{ session.get('username', 'unknown') }}
+                Level: {{ session.get('honey_level', 'unknown') }}
+                Resource: {{ request.path }}
+                Referrer: {{ request.referrer or 'Direct' }}
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add a slight delay before allowing the user to leave
+        document.addEventListener('DOMContentLoaded', function() {
+            const backBtn = document.querySelector('.back-btn');
+            backBtn.style.opacity = '0.5';
+            backBtn.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                backBtn.style.opacity = '1';
+                backBtn.style.pointerEvents = 'auto';
+            }, 3000);
+        });
+    </script>
+</body>
+</html> 

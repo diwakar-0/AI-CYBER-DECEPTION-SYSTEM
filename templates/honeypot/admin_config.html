@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Administration Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #00ff00;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 20, 0, 0.6);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+        
+        .form-actions {
+            margin-top: 30px;
+            text-align: right;
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-menu li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar-menu li a {
+            color: #00ff00;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .sidebar-menu li a:hover {
+            color: #00ff99;
+        }
+        
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(0, 20, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #00ffaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SYSTEM ADMINISTRATION</h1>
+    </div>
+    
+    <div class="content">
+        <div class="dashboard-layout">
+            <div class="sidebar">
+                <h3>Admin Controls</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Firewall</a></li>
+                    <li><a href="#">Database</a></li>
+                    <li><a href="#">Backup</a></li>
+                    <li><a href="#">Logs</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <div class="card">
+                    <h2 class="section-title">Global Security Settings</h2>
+                    
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="firewall">Firewall Status</label>
+                            <select name="firewall" id="firewall">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ssh_port">SSH Port</label>
+                            <input type="text" name="ssh_port" id="ssh_port" value="22">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin_ip">Admin IP Whitelist (comma separated)</label>
+                            <input type="text" name="admin_ip" id="admin_ip" value="127.0.0.1, 192.168.1.1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="db_password">Database Password</label>
+                            <input type="password" name="db_password" id="db_password" value="********">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="api_key">API Key</label>
+                            <input type="text" name="api_key" id="api_key" value="sk_live_51HsZRDJp7qPyW6fLPtyZU1Tq">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="backup_path">Backup File Path</label>
+                            <input type="text" name="backup_path" id="backup_path" value="/var/www/backups">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="card">
+                    <h2 class="section-title">System Status</h2>
+                    <p>CPU Usage: 23%</p>
+                    <p>Memory Usage: 1.4GB / 4GB</p>
+                    <p>Disk Space: 56.7GB / 100GB</p>
+                    <p>Last Backup: 2023-04-21 14:30:00</p>
+                    <p>Server Uptime: 27 days, 4 hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

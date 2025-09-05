@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Configuration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .user-info {
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .username {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 0, 0.7);
+        }
+        
+        .main-content {
+            background: rgba(0, 20, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .config-section {
+            background: rgba(0, 30, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .config-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            background: rgba(0, 20, 0, 0.9);
+            color: #00ff00;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 5px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%2300ff00' d='M0 0l4 4 4-4H0z' transform='translate(0 2)'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        
+        .btn {
+            background: rgba(0, 100, 0, 0.7);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 150, 0, 0.7);
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .danger-zone {
+            background: rgba(50, 0, 0, 0.7);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+        
+        .danger-zone .config-title {
+            border-bottom-color: rgba(255, 0, 0, 0.3);
+            color: #ff5555;
+        }
+        
+        .btn-danger {
+            background: rgba(100, 0, 0, 0.7);
+            color: #ff5555;
+            border-color: #ff5555;
+        }
+        
+        .btn-danger:hover {
+            background: rgba(150, 0, 0, 0.7);
+        }
+        
+        .message {
+            background: rgba(0, 50, 0, 0.7);
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SYSTEM CONFIGURATION</h1>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="username">{{ username }}</div>
+                <div class="user-role">{{ level }} Access</div>
+            </div>
+            
+            <ul>
+                <li><a href="/user-dashboard">📊 Dashboard</a></li>
+                <li><a href="/file-manager">📁 File Manager</a></li>
+                <li><a href="/system-config" class="active">⚙️ System Config</a></li>
+                <li><a href="#">👥 User Management</a></li>
+                <li><a href="#">🔒 Security</a></li>
+                <li><a href="/database-admin">🗄️ Database</a></li>
+                <li><a href="/logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            {% if message %}
+            <div class="message">{{ message }}</div>
+            {% endif %}
+            
+            <h2>System Configuration</h2>
+            
+            <form method="POST">
+                <div class="config-section">
+                    <div class="config-title">General Settings</div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="site-name">Site Name</label>
+                            <input type="text" id="site-name" name="site_name" class="form-control" value="My Application">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" name="admin_email" class="form-control" value="admin@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timezone">Timezone</label>
+                            <select id="timezone" name="timezone" class="form-control">
+                                <option value="UTC">UTC</option>
+                                <option value="America/New_York">Eastern Time (ET)</option>
+                                <option value="America/Chicago">Central Time (CT)</option>
+                                <option value="America/Denver">Mountain Time (MT)</option>
+                                <option value="America/Los_Angeles" selected>Pacific Time (PT)</option>
+                                <option value="Europe/London">London (GMT)</option>
+                                <option value="Europe/Paris">Paris (CET)</option>
+                                <option value="Asia/Tokyo">Tokyo (JST)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date-format">Date Format</label>
+                            <select id="date-format" name="date_format" class="form-control">
+                                <option value="Y-m-d" selected>2024-04-15</option>
+                                <option value="m/d/Y">04/15/2024</option>
+                                <option value="d.m.Y">15.04.2024</option>
+                                <option value="d F, Y">15 April, 2024</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="config-section">
+                    <div class="config-title">Server Settings</div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="debug-mode">Debug Mode</label>
+                            <select id="debug-mode" name="debug_mode" class="form-control">
+                                <option value="0">Disabled</option>
+                                <option value="1" selected>Enabled</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cache-time">Cache Time (seconds)</label>
+                            <input type="number" id="cache-time" name="cache_time" class="form-control" value="3600">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="max-upload">Max Upload Size (MB)</label>
+                            <input type="number" id="max-upload" name="max_upload" class="form-control" value="10">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="session-lifetime">Session Lifetime (minutes)</label>
+                            <input type="number" id="session-lifetime" name="session_lifetime" class="form-control" value="120">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="allowed-ips">Allowed IP Addresses (one per line)</label>
+                        <textarea id="allowed-ips" name="allowed_ips" class="form-control" rows="4">127.0.0.1
+192.168.1.0/24
+10.0.0.0/8</textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="enable-ssl" name="enable_ssl" checked>
+                        <label for="enable-ssl">Enable SSL</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="enable-maintenance" name="enable_maintenance">
+                        <label for="enable-maintenance">Enable Maintenance Mode</label>
+                    </div>
+                </div>
+                
+                <div class="config-section">
+                    <div class="config-title">Email Configuration</div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="mail-driver">Mail Driver</label>
+                            <select id="mail-driver" name="mail_driver" class="form-control">
+                                <option value="smtp" selected>SMTP</option>
+                                <option value="sendmail">Sendmail</option>
+                                <option value="mailgun">Mailgun</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mail-host">SMTP Host</label>
+                            <input type="text" id="mail-host" name="mail_host" class="form-control" value="smtp.example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mail-port">SMTP Port</label>
+                            <input type="number" id="mail-port" name="mail_port" class="form-control" value="587">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mail-username">SMTP Username</label>
+                            <input type="text" id="mail-username" name="mail_username" class="form-control" value="user@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mail-password">SMTP Password</label>
+                            <input type="password" id="mail-password" name="mail_password" class="form-control" value="password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mail-encryption">SMTP Encryption</label>
+                            <select id="mail-encryption" name="mail_encryption" class="form-control">
+                                <option value="tls" selected>TLS</option>
+                                <option value="ssl">SSL</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="config-section danger-zone">
+                    <div class="config-title">Danger Zone</div>
+                    
+                    <div class="form-group">
+                        <label for="reset-confirm">Type "RESET" to confirm reset</label>
+                        <input type="text" id="reset-confirm" name="reset_confirm" class="form-control" placeholder="RESET">
+                    </div>
+                    
+                    <button type="button" class="btn btn-danger" onclick="confirmReset()">Reset All Settings</button>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="window.location.href='/user-dashboard'">Cancel</button>
+                    <button type="submit" class="btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function confirmReset() {
+            const confirmText = document.getElementById('reset-confirm').value;
+            if (confirmText === 'RESET') {
+                if (confirm('Are you sure you want to reset all settings to default values? This action cannot be undone.')) {
+                    alert('This is a simulated environment. In a real system, all settings would be reset.');
+                }
+            } else {
+                alert('Please type "RESET" to confirm.');
+            }
+        }
+        
+        // Add a slight delay to simulate processing when form is submitted
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.querySelector('.btn[type="submit"]').disabled = true;
+            document.querySelector('.btn[type="submit"]').textContent = 'Saving...';
+            
+            setTimeout(() => {
+                alert('This is a simulated environment. In a real system, your changes would be saved.');
+                window.location.href = '/system-config?message=Changes+saved+successfully';
+            }, 1500);
+        });
+    </script>
+</body>
+</html> 
